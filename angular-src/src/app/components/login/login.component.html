@@ -1,0 +1,30 @@
+<h2 class="page-header"> 로그인 | Login </h2>
+<br>
+<form (ngSubmit)="onLoginSubmit()">
+  <!-- (ngSubmit) >> 이걸 이벤트 바인딩이라고 함. 로그인 버튼 클릭시, onLoginSubmit() 함수 실행-->
+  <div class="form-group">
+    <label for="exampleInputEmail3">아이디: Username</label>
+    <input 
+    type="text"
+    [(ngModel)]="username"
+    [ngModelOptions]="{ standalone: true }"
+    class="form-control"
+    id="exampleInputEmail3"
+    />
+  </div>
+  <br>
+  
+  <div class="form-group">
+    <label for="exampleInputEmail4">패스워드: Password </label>
+    <input 
+    type="password"
+    [(ngModel)]="password"
+    [ngModelOptions]="{ standalone: true }"
+    class="form-control"
+    id="exampleInputEmail4"
+    />
+  </div>
+  <br>
+
+  <input type="submit" class="btn btn-primary" value="로그인" />
+</form>

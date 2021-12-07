@@ -1,0 +1,56 @@
+<h2 class="page-header"> 환율정보 | Currency Exchange Rate </h2>>
+<p>
+  세계 각국의 통화간 환율정보를 제공합니다. <br />
+  <a href="https://exchangeratesapi.io/"> Exchangerates </a> 활용 <br />
+  환율정보를 요청하기 위해서는 이 사이트에 회원가입하고 API key를 얻어야 합니다.
+</p>
+
+<div class="row" *ngIf="rates">
+  <div class="col alert-success">
+    <h3>Currency Converter</h3>
+    <table class="table">
+      <tr>
+        <td>From</td>
+        <td>
+          <input 
+            type="number"
+            placeholder="amount from"
+            [(ngModel)]="amountFrom"
+            (change)="convert()"
+          /> &nbsp;
+          <select [(ngModel)]="from"
+          (change)="changeCurrency()">
+          <option *ngFor="let c of getAllCurrencies()" [value]="c">
+            {{ c }}
+          </option>
+        </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td>To</td>
+        <td>
+          <input 
+          type="number"
+          placeholder="amount to"
+          [(ngModel)]="amountTo"
+          (change)="convertR()"
+          /> &nbsp;
+          <select [(ngModel)]="to" (change)="changeCurrency()">
+            <option *ngFor="let c of getAllCurrencies()" [value]="c"> {{ c }} </option>
+          </select>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="col"></div>
+</div>
+
+<br />
+<p>
+  KRW: 대한민국 원화, USD: 미국달러, EUR: 유로, JPN: 일본엔화, CNY: 중국위안화
+  <br />
+  AUD: 호주달러, CAD: 캐나다달러, NZD: 뉴질랜드달러, INR: 인도루피, BTC: 비트코인
+</p>
+

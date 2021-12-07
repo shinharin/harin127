@@ -1,0 +1,27 @@
+{
+  "name": "middle",
+  "version": "1.0.0",
+  "description": "web page TeamProject. 자격체크",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "keywords": [
+    "MEAN",
+    "로그인",
+    "자격증",
+    "기타 추가 가능"
+  ],
+  "author": "신하린",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.5",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  }
+}
