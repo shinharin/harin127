@@ -17,10 +17,10 @@ export class AuthService {
 
   prepEndpoint(ep){
     //1. 로컬 서버에서 개발시
-    // return 'http://localhost:3000/' + ep;
+    return 'http://localhost:3000/' + ep;
 
     //2. 클라우드 서버에서 운영시
-    return ep;
+    // return ep;
   }
 
   constructor(

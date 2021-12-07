@@ -2,8 +2,52 @@
   <!-- *ngIf="neme"은 .. "name"이라는 변수가 있으면 div 생성하고(작성된 코드 작동하고), 없으면 작동x -->
   <h2 class="page-header"> Name: {{name}} </h2>
   <br>
-  <p>
-    username: {{username}} <br>
-    Email: {{email}} <br>
-  </p>
+  
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+    <!-- button id로 내용 변화주기 가능 -->
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Profile</button>
+    </li>
+
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="project-tab" data-bs-toggle="tab" data-bs-target="#project" type="button" role="tab" aria-controls="project" aria-selected="false">Project</button>
+    </li>
+
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="sns-tab" data-bs-toggle="tab" data-bs-target="#sns" type="button" role="tab" aria-controls="sns" aria-selected="false">SNS</button>
+    </li>
+
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="hobby-tab" data-bs-toggle="tab" data-bs-target="#hobby" type="button" role="tab" aria-controls="hobby" aria-selected="false">Hobby</button>
+    </li>
+
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    </li>
+  </ul>
+
+
+  <div class="tab-content" id="myTabContent" style="background-color: rgb(108, 198, 201); padding: 30px;">
+    
+    <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, maxime iure quam placeat consequatur iste voluptates numquam unde at consectetur sunt ea architecto quia dolor dolorem facere nisi eius fuga.</p>
+
+    </div>
+
+    <div class="tab-pane fade" id="project" role="tabpanel" aria-labelledby="project-tab">Diary_Albums</div>
+
+    <div class="tab-pane fade" id="sns" role="tabpanel" aria-labelledby="sns-tab">Bucket</div>
+    
+    <div class="tab-pane fade" id="hobby" role="tabpanel" aria-labelledby="hobby-tab">Board</div>
+    
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
+  </div>
+
+
 </div>
